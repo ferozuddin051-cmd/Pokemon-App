@@ -46,6 +46,7 @@ span {
 .container {
   max-width: 152rem;
   margin: auto;
+  padding: 0 2rem;
 }
 
 .grid-three-cols {
@@ -176,7 +177,6 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin: 1.6rem 0;
 
   & p {
@@ -202,7 +202,6 @@ pokemon-info {
   text-align: center;
 }
 
-/* ///////////////////////////////////////// */
 .short-container {
   width: 65rem;
 
@@ -218,4 +217,284 @@ pokemon-info {
     padding: 0.6rem 0;
     cursor: pointer;
   }
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Laptops (1440px and below) */
+@media only screen and (max-width: 1440px) {
+  .container {
+    max-width: 130rem;
+    padding: 0 3rem;
+  }
+
+  .cards {
+    gap: 2.4rem;
+  }
+
+  .pokemon-card {
+    width: 100%;
+    max-width: 32rem;
+  }
+}
+
+/* Standard Laptops (1366px and below) */
+@media only screen and (max-width: 1366px) {
+  .container {
+    max-width: 120rem;
+    padding: 0 2.5rem;
+  }
+
+  .cards {
+    gap: 2rem;
+  }
+
+  .pokemon-card {
+    width: 100%;
+    max-width: 30rem;
+  }
+}
+
+/* Small Laptops (1280px and below) */
+@media only screen and (max-width: 1280px) {
+  .container {
+    max-width: 110rem;
+    padding: 0 2rem;
+  }
+
+  .cards {
+    gap: 1.8rem;
+  }
+
+  .pokemon-card {
+    width: 100%;
+    max-width: 28rem;
+  }
+}
+
+/* Large Tablets and Small Laptops (1200px and below) */
+@media only screen and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+  }
+
+  .container {
+    padding: 0 3rem;
+  }
+
+  .pokemon-card {
+    width: 100%;
+    max-width: 36rem;
+  }
+}
+
+/* Tablets (992px and below) */
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 56.25%; /* 9px */
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .grid-three-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pokemon-card {
+    width: 100%;
+    max-width: 36rem;
+  }
+
+  .short-container {
+    width: 90%;
+    max-width: 60rem;
+  }
+}
+
+/* Small Tablets (768px and below) */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%; /* 8px */
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  header {
+    margin: 2rem 0;
+  }
+
+  .pokemon-search {
+    margin-bottom: 2rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  .cards {
+    gap: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  .grid-three-cols {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .pokemon-card {
+    min-height: 38rem;
+  }
+
+  .pokemon-name {
+    font-size: 2.8rem;
+  }
+}
+
+/* Mobile Devices (576px and below) */
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 50%; /* 8px */
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pokemon-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 36rem;
+  }
+
+  .pokemon-image {
+    width: 70%;
+    height: 13rem;
+  }
+
+  .pokemon-name {
+    font-size: 2.4rem;
+    margin-top: 1.6rem;
+  }
+
+  .pokemon-highlight p {
+    padding: 0.4rem 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .short-container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  /* Disable hover effects on mobile */
+  .pokemon-card:hover {
+    transform: none;
+  }
+
+  .pokemon-card:hover::before {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+/* Extra Small Mobile (480px and below) */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .pokemon-card {
+    min-height: 34rem;
+    padding: 1.2rem;
+  }
+
+  .pokemon-name {
+    font-size: 2.2rem;
+  }
+
+  .grid-three-cols {
+    margin: 2rem 0;
+  }
+}
+
+
+
+/* from here you can delete
+
+/* Fix for card overflow */
+.pokemon-card {
+  width: 100%;
+  max-width: 36rem;
+  min-height: 42rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  padding: 1.6rem;
+  position: relative;
+  overflow: hidden; /* ADD THIS */
+}
+
+/* Fix for pokemon-info sections */
+.pokemon-info {
+  text-align: center;
+  word-wrap: break-word; /* ADD THIS */
+  overflow-wrap: break-word; /* ADD THIS */
+  max-width: 100%; /* ADD THIS */
+}
+
+.pokemon-info p {
+  word-wrap: break-word; /* ADD THIS */
+  overflow-wrap: break-word; /* ADD THIS */
+  hyphens: auto; /* ADD THIS */
+}
+
+/* Specific fix for ability text */
+.ability-text {
+  font-size: 1.4rem; /* Slightly smaller */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Fix for grid columns to prevent overflow */
+.grid-three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  text-align: center;
+  margin: 3.2rem 0;
+  align-items: end;
+  overflow: hidden; /* ADD THIS */
+}
+
+.grid-three-cols > * {
+  min-width: 0; /* ADD THIS - Important for grid overflow fix */
+  overflow: hidden; /* ADD THIS */
 }

@@ -17,37 +17,38 @@ export const PokemonCards = ({ pokemonData }) => {
 
         <div className="grid-three-cols">
             <p className="pokemon-info">
-                <span>Height:</span>{pokemonData.height}
+                <span>Height: </span>{pokemonData.height}
             </p>
 
             <p className="pokemon-info">
-                <span>Weight:</span>{pokemonData.weight}
+                <span>Weight: </span>{pokemonData.weight}
             </p>
             
             <p className="pokemon-info">
-                <span>Speed:</span>{pokemonData.stats[5].base_stat}
+                <span>Speed: </span>{pokemonData.stats[5].base_stat}
             </p>
         </div>
 
         <div className="grid-three-cols">
             <div className="pokemon-info">
-                <p><span>Experience:</span>{pokemonData.base_experience}</p>
+                <p><span>Experience: </span>{pokemonData.base_experience}</p>
                 
             </div>
 
             <div className="pokemon-info">
-                <p> <span>Attack:</span>{pokemonData.stats[1].base_stat}</p>
+                <p> <span>Attack: </span>{pokemonData.stats[1].base_stat}</p>
                
             </div>
 
             <div className="pokemon-info">
-                <p><span>Ability:</span>
+                <p><span>Ability: </span>
                 {
                     pokemonData.abilities
                     .map((abilityInfo) => abilityInfo.ability.name)
                     .slice(0, 1)
                     .join(", ")
-                }</p>
+                }
+                </p>
             </div>
         </div>
     </li>
